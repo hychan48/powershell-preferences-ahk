@@ -1,0 +1,9 @@
+{
+        "AutoHotkey2.InterpreterPath": "c:\\Users\\Jason\\AppData\\Local\\Programs\\AutoHotkey\\v2\\AutoHotkey64.exe"
+        /* v1*/
+        // "AutoHotkey2.InterpreterPath": "c:\\Users\\Jason\\AppData\\Local\\Programs\\AutoHotkey\\v1.1.36.02\\AutoHotkeyU64.exe"
+        // "AutoHotkey2.InterpreterPath": "C:/Program Files/AutoHotkey/AutoHotkeyU64.exe"
+
+        /* overrides from default settings */
+        
+}
