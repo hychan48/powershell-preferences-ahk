@@ -1,9 +1,28 @@
+/**
+ * Setting samples
+ * need to verify best practice for uploading these as a shared resource
+ * I'm assuming the order is settings.json > workspace.settings > defaultSettings
+ */
 {
-        "AutoHotkey2.InterpreterPath": "c:\\Users\\Jason\\AppData\\Local\\Programs\\AutoHotkey\\v2\\AutoHotkey64.exe"
-        /* v1*/
+        "AutoHotkey2.InterpreterPath": "c:\\Users\\Jason\\AppData\\Local\\Programs\\AutoHotkey\\v2\\AutoHotkey64.exe",
+        "files.exclude": {
+                ".folder_setting_location": true
+        },
+        "files.eol": "\n",
+        "editor.indentSize": "tabSize",
+        "editor.detectIndentation": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        /* v1 both urls work suprisingly */
         // "AutoHotkey2.InterpreterPath": "c:\\Users\\Jason\\AppData\\Local\\Programs\\AutoHotkey\\v1.1.36.02\\AutoHotkeyU64.exe"
         // "AutoHotkey2.InterpreterPath": "C:/Program Files/AutoHotkey/AutoHotkeyU64.exe"
 
         /* overrides from default settings */
+        // {
+        //         "key": "ctrl+f9",
+        //         "command": "ahk++.run",
+        //         "when": "editorLangId == 'ahk'"
+        //       }
+
         
 }
