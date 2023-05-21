@@ -1,1 +1,2 @@
-Error:e
+WinGetProcessName:Trello.exe
+WinGetProcessPath:C:\Program Files\WindowsApps\45273LiamForsyth.PawsforTrello_2.14.0.0_x64__7pb5ddty8z1pa\app\Trello.exe

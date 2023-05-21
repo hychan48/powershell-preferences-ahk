@@ -1,7 +1,8 @@
 #Requires AutoHotkey v2.0
 #SingleInstance
 SetWorkingDir A_ScriptDir
-
+; out:= EnvGet("LOCALAPPDATA") "\Programs\AutoHotkey\Compiler\Ahk2Exe.exe"
+; C:\Program Files\AutoHotkey
 ; if not A_IsAdmin
 ; 	Run *RunAs "%A_ScriptFullPath%" ;
 ; WinGet, active_id, ID, "A"
