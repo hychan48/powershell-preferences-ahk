@@ -25,7 +25,6 @@ $PSCommandPath    # the full path of the script
 
 
 # Shortcuts
-* 
 * alt_tilde_limit (maybe)
 * ctrl+d in terminal should exit (powershelle tc)
 * execute selection into terminal
