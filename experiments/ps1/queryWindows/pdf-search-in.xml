@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<persistedQuery version="1.0">
+  <viewInfo autoListFlags="0" displayName="Search Results in manulife_invoices" iconSize="32" stackIconSize="0">
+    <visibleColumns>
+      <column viewField="System.ItemNameDisplay"/>
+      <column viewField="System.DateModified"/>
+      <column viewField="System.ItemTypeText"/>
+      <column viewField="System.Size"/>
+      <column viewField="System.ItemFolderPathDisplayNarrow"/>
+    </visibleColumns>
+    <sortList>
+      <sort direction="descending" viewField="System.Search.Rank"/>
+      <sort direction="descending" viewField="System.DateModified"/>
+      <sort direction="ascending" viewField="System.ItemNameDisplay"/>
+    </sortList>
+  </viewInfo>
+  <query>
+    <conditions>
+      <condition localeName="en-US" operator="wordmatch" property="System.Generic.String" propertyType="string" type="leafCondition" value="pdf">
+        <attributes>
+          <attribute attributeID="{9554087B-CEB6-45AB-99FF-50E8428E860D}" chs="1" clsid="{C64B9B66-E53D-4C56-B9AE-FEDE4EE95DB1}" sqro="585" timestamp_high="31034559" timestamp_low="1923582595">
+            <condition type="andCondition">
+              <attributes>
+                <attribute attributeID="{9554087B-CEB6-45AB-99FF-50E8428E860D}" chs="0" clsid="{C64B9B66-E53D-4C56-B9AE-FEDE4EE95DB1}" localeName="en-US" parsedString="kind:pdf" timestamp_high="31034557" timestamp_low="2563298921"/>
+              </attributes>
+              <condition localeName="" operator="imp" property="System.Kind" propertyType="string" type="leafCondition" value="" valuetype="System.StructuredQueryType.Value">
+                <attributes/>
+              </condition>
+              <condition localeName="en-US" operator="imp" property="" propertyType="string" type="leafCondition" value="pdf">
+                <attributes/>
+              </condition>
+            </condition>
+          </attribute>
+        </attributes>
+      </condition>
+    </conditions>
+    <kindList>
+      <kind name="item"/>
+    </kindList>
+    <scope>
+      <include attributes="1887437183" path="::{20D04FE0-3AEA-1069-A2D8-08002B30309D}\::{D3162B92-9365-467A-956B-92703ACA08AF}\2023\manulife_invoices"/>
+    </scope>
+  </query>
+  <properties>
+    <author Type="string">Jason</author>
+  </properties>
+</persistedQuery>
