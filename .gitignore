@@ -1,3 +1,6 @@
 # src/ahk_v2/install_ahk_v2_libs.ps1
 # install*libs.ps1
 experiments/log.txt
+experiments/ps1/scratch.ps1
+experiments/ps1/scratch2.ps1
+experiments/ps1/scratch3.ps1

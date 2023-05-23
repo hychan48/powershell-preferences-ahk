@@ -84,8 +84,30 @@ Documents: readme_query_windows.md
 
 
 ```ps1
-# v5 only
+# v5 onlyP
 $currentDisplay = Get-WmiObject -Namespace root\wmi -Class WmiMonitorBasicDisplayParams
 $currentDisplay # print to console
 # output is 
 ```
+
+# ok hopeless . ahk can do it easier - for finding monitors
+
+
+
+"Provider=Search.CollatorDSO;Extended Properties=’Application=Windows’;"
+
+# got the query done in the file
+InvokeQueryIndex.ps1
+Note. the index is grabbing things from node_modules...
+* perhaps i should exclude that folder
+https://superuser.com/questions/1003878/how-to-efficiently-exclude-svn-and-git-folders-in-windows-10-indexing
+https://learn.microsoft.com/en-us/windows/win32/search/-search-3x-wds-mngidx-overview
+https://learn.microsoft.com/en-us/windows/win32/search/-search-3x-wds-extidx-overview
+
+# There is one indexing...
+# and scope
+https://learn.microsoft.com/en-us/windows/win32/lwef/-search-2x-wds-aqsreference
+
+# system.search.hitcount
+https://learn.microsoft.com/en-us/windows/win32/properties/props-system-search-hitcount
+https://learn.microsoft.com/en-us/windows/win32/properties/props-system-search-store
