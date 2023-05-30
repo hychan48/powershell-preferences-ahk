@@ -2,6 +2,7 @@
 # system.search.hitcount
 # https://learn.microsoft.com/en-us/windows/win32/properties/props-system-search-hitcount
 # https://learn.microsoft.com/en-us/windows/win32/properties/props-system-search-store
+# gpt4 couldnt do it. it's kidna close though
 
 $connectionString = "Provider=Search.CollatorDSO;Extended Properties='Application=Windows';"
 $connection = New-Object -TypeName System.Data.OleDb.OleDbConnection -ArgumentList $connectionString
@@ -14,7 +15,7 @@ $uniqueStores = @()
 
 do {
     # Build a query that excludes the stores we've already found.
-    $query = "SELECT TOP 1 System.Search.Store FROM SystemIndex"
+    $query = "SELECT TOP 100 System.Search.Store FROM SystemIndex"
     if ($uniqueStores) {
         $excludeList = "'" + ($uniqueStores -join "','") + "'"
         $query += " WHERE System.Search.Store NOT IN ($excludeList)"
@@ -27,7 +28,7 @@ do {
     $adapter.Fill($dataset) | Out-Null
 
     # Add the new store to our list of unique stores.
-    $newStore = $dataset.Tables[0] | Select-Object -ExpandProperty Store
+    $newStore = $dataset.Tables[0] | Select-Object -ExpandProperty "System.Search.Store"
     if ($newStore) {
         $uniqueStores += $newStore
     }

@@ -1,0 +1,72 @@
+[
+  {
+    "Subject": "CN=Adobe Content Certificate 10-5, OU=Cloud Technology, O=Adobe Systems, L=San Jose, S=California, C=US",
+    "Thumbprint": "F0BD97B4EC6CD8B71C35631738259CF9F2E54381",
+    "Issuer": "CN=Adobe Intermediate CA 10-3, OU=Cloud Technology, O=Adobe Systems, L=San Jose, S=California, C=US",
+    "ValidFrom": "2018-08-20T09:18:42-04:00",
+    "ValidTo": "2025-08-18T09:18:42-04:00",
+    "FriendlyName": "",
+    "SerialNumber": "68512A40",
+    "StoreLocation": "Microsoft.PowerShell.Security\\Certificate::CurrentUser\\My"
+  },
+  {
+    "Subject": "CN=Adobe Intermediate CA 10-3, OU=Cloud Technology, O=Adobe Systems, L=San Jose, S=California, C=US",
+    "Thumbprint": "D1DF7F06B769BCCB3F4479041EC1F06E9CD3CB1A",
+    "Issuer": "CN=Adobe Root CA 10-3, OU=Cloud Technology, O=Adobe Systems, L=San Jose, S=California, C=US",
+    "ValidFrom": "2018-08-17T13:37:58-04:00",
+    "ValidTo": "2068-08-04T13:37:58-04:00",
+    "FriendlyName": "",
+    "SerialNumber": "76CA52B2",
+    "StoreLocation": "Microsoft.PowerShell.Security\\Certificate::CurrentUser\\My"
+  },
+  {
+    "Subject": "CN=Adobe Intermediate CA 10-4, OU=Cloud Technology, O=Adobe Systems, L=San Jose, S=California, C=US",
+    "Thumbprint": "BF89E52F8D681360E6B84941BD2F9BC0093309F6",
+    "Issuer": "CN=Adobe Root CA 10-3, OU=Cloud Technology, O=Adobe Systems, L=San Jose, S=California, C=US",
+    "ValidFrom": "2018-08-17T13:37:59-04:00",
+    "ValidTo": "2068-08-04T13:37:59-04:00",
+    "FriendlyName": "",
+    "SerialNumber": "732D29E8",
+    "StoreLocation": "Microsoft.PowerShell.Security\\Certificate::CurrentUser\\My"
+  },
+  {
+    "Subject": "CN=0835e1fc-05d6-48c2-8f66-6e4aaf5eecde",
+    "Thumbprint": "A6963F06049CF095961FC7B1D68121406641A001",
+    "Issuer": "DC=net + DC=windows + CN=MS-Organization-Access + OU=82dbaca4-3e81-46ca-9c73-0950c1eaca97",
+    "ValidFrom": "2020-12-28T22:37:37-05:00",
+    "ValidTo": "2030-12-28T23:07:37-05:00",
+    "FriendlyName": "",
+    "SerialNumber": "F0B940787938F2B949C19069E2ADCC3A",
+    "StoreLocation": "Microsoft.PowerShell.Security\\Certificate::CurrentUser\\My"
+  },
+  {
+    "Subject": "CN=Adobe Content Certificate 10-6, OU=Cloud Technology, O=Adobe Systems, L=San Jose, S=California, C=US",
+    "Thumbprint": "906CC149415780CFB79F39E1CF449F87CA6D4D16",
+    "Issuer": "CN=Adobe Intermediate CA 10-4, OU=Cloud Technology, O=Adobe Systems, L=San Jose, S=California, C=US",
+    "ValidFrom": "2018-08-20T09:20:00-04:00",
+    "ValidTo": "2025-08-18T09:20:00-04:00",
+    "FriendlyName": "",
+    "SerialNumber": "26EECE61",
+    "StoreLocation": "Microsoft.PowerShell.Security\\Certificate::CurrentUser\\My"
+  },
+  {
+    "Subject": "C=CA, E=jasonhy.chan@utoronto.ca, CN=Jason Chan",
+    "Thumbprint": "8DB530F4F534336CE47158CCD740D73D1378C11E",
+    "Issuer": "C=CA, E=jasonhy.chan@utoronto.ca, CN=Jason Chan",
+    "ValidFrom": "2022-07-13T14:55:32-04:00",
+    "ValidTo": "2027-07-13T14:55:32-04:00",
+    "FriendlyName": "",
+    "SerialNumber": "1E8CD05D4ECE2DFCC540",
+    "StoreLocation": "Microsoft.PowerShell.Security\\Certificate::CurrentUser\\My"
+  },
+  {
+    "Subject": "CN=eaa4f9de-ee0b-4109-bbc7-c541b525fca4",
+    "Thumbprint": "56537B467F6C91B6A990690525E629C95527EFCE",
+    "Issuer": "CN=eaa4f9de-ee0b-4109-bbc7-c541b525fca4",
+    "ValidFrom": "2023-05-09T00:21:37-04:00",
+    "ValidTo": "2024-05-08T12:21:37-04:00",
+    "FriendlyName": "Microsoft Your Phone",
+    "SerialNumber": "00BDC3E2E976AF53D0",
+    "StoreLocation": "Microsoft.PowerShell.Security\\Certificate::CurrentUser\\My"
+  }
+]

@@ -36,6 +36,7 @@ $connection = New-Object -TypeName System.Data.OleDb.OleDbConnection -ArgumentLi
 $connection.Open()
 
 try {
+  # https://learn.microsoft.com/en-us/windows/win32/search/-search-sql-windowssearch-entry
   # Query 1
   # $projections = " System.FileName, System.ItemPathDisplay, System.FileExtension"
   # ItemUrl is unc file:C:/Users/username/...
@@ -60,7 +61,7 @@ try {
    where System.FileName ='readme_vscode.md' and System.FileExtension = '.md'"
   #  where System.FileName like 'readme%'"
   $result1 = Invoke-Query -Connection $connection -Query $query1
-  $result1
+  # $result1
   # Process $result1...
 
   # Query 2
@@ -72,22 +73,38 @@ try {
   # _ has to be escaped like [_] in sql
   # https://learn.microsoft.com/en-us/sql/t-sql/language-elements/like-transact-sql?view=sql-server-ver16
   # might need to autopopulate the file extension? or same performance i wonder
-  $result2 = Invoke-Query -Connection $connection -Query $query2
+  # $result2 = Invoke-Query -Connection $connection -Query $query2
   # $result2 # if i want it in row list
   $result2 | Format-Table -AutoSize
   # Process $result2...
   # $query3="SELECT TOP 10 $projections ,System.FileAttributes FROM SystemIndex "
   $query3="SELECT TOP 10 $projections ,System.ItemType FROM SystemIndex "
-  $query3+="where System.Search.Rank = 1000"
+  $query3+="WHERE System.FileName LIKE 'readme[_]%.md' and System.FileExtension = '.md'"
   # Invoke-Query -Connection $connection -Query $query3
-  Invoke-Query -Connection $connection -Query $query3 |Format-Table
+  # Invoke-Query -Connection $connection -Query $query3 |Format-Table
   
   
   # Try distinct values - doesnt work... would need to quey the whole table
   # crazy probably faster to do it in a loop
-  $query4="SELECT DISTINCT System.Search.Store FROM SystemIndex"
+  # SQL-92 standard?
+  # $query4="SELECT top 2000 $projections, System.Search.Store FROM SystemIndex"
+  $query4="SELECT $projections, System.Search.Store FROM SystemIndex"
+  # $query4="SELECT $projections, System.Search.Store FROM SystemIndex offset 10 rows FETCH NEXT 10 rows only"a
+  # $query4+="WHERE System.FileName LIKE 'readme[_]%.md' and System.FileExtension = '.md'"
+  # $query4+="WHERE System.FileName LIKE '%read%'"
+  # $query4+="WHERE System.FileExtension = '.md'"
   Invoke-Query -Connection $connection -Query $query4 |Format-Table
 }
 finally {
   $connection.Close()
+}
+function Resolve-Error ($ErrorRecord=$Error[0])
+{
+   $ErrorRecord | Format-List * -Force
+   $ErrorRecord.InvocationInfo |Format-List *
+   $Exception = $ErrorRecord.Exception
+   for ($i = 0; $Exception; $i++, ($Exception = $Exception.InnerException))
+   {   "$i" * 80
+       $Exception |Format-List * -Force
+   }
 }

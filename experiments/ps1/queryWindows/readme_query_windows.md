@@ -1,6 +1,16 @@
+
 # Query Windows Search Tool Synatx
 1. Query indexed files first
-2. 
+2. I think start menu is priority
+3. there is also .searches
+```bash
+C:\Users\Jason\OneDrive\wdev_jc_main\windows_ux
+```
+# voidtools everything... free tool
+https://www.voidtools.com/support/everything/installing_everything/
+
+# everything toolbar
+https://github.com/srwi/EverythingToolbar
 
 
 ext:.txt
@@ -9,6 +19,13 @@ ext:.txt
 * foldername
 * folders
 * like?
+
+# Query
+https://learn.microsoft.com/en-us/windows/win32/search/-search-sql-windowssearch-entry
+
+
+https://learn.microsoft.com/en-us/sql/ado/guide/data/service-providers-and-components?view=sql-server-ver16
+https://learn.microsoft.com/en-us/sql/ado/guide/data/service-providers-and-components?view=sql-server-ver16
 
 # Scope / Root to search
 * foldername:MyDocuments or in:MyDocuments
@@ -27,13 +44,20 @@ social OR security
 report isonline:true	
 maybe add tag?
 
-# options
+# options?
 ```ps1
 not very helpful
 regjump.exe HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search
 
 regjump.exe HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\SearchPlatform
+
+C:\ProgramData\Microsoft\Search\Data\Applications\Windows
+
+
 ```
+
+# Exclusion Regex
+regjump HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search\Gather\Windows\SystemIndex\Sites\LocalHost\Paths
 
 # Reduced Set of Fields from Windows Search
 ```ps1
@@ -111,3 +135,41 @@ https://learn.microsoft.com/en-us/windows/win32/lwef/-search-2x-wds-aqsreference
 # system.search.hitcount
 https://learn.microsoft.com/en-us/windows/win32/properties/props-system-search-hitcount
 https://learn.microsoft.com/en-us/windows/win32/properties/props-system-search-store
+
+
+# Register hot key?
+https://www.nirsoft.net/utils/hot_keys_list.html
+* is there bulk download
+
+
+# defn a bunch of things to do here...
+* need to add some filters for today
+* readme etc...
+* maybe add like a session thing
+* cross platform support would be nice
+* cloud is a must
+
+
+# I want to debug
+* maybe query clipboard or something for urls
+* https://learn.microsoft.com/en-us/uwp/api/windows.system.virtualkey?view=winrt-22621
+  * dec
+* https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
+  * vk in hex
+
+* everything ini
+
+# scan codes?
+* https://www.autohotkey.com/board/topic/13958-debugging-scancodes/
+
+
+
+# right click menu
+https://www.nirsoft.net/utils/shell_menu_view.html
+
+* wow
+https://www.nirsoft.net/utils/fastresolver.html
+
+
+* networkinterfacesview.exe
+* awesome
