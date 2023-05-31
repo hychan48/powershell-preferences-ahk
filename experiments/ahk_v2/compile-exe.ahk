@@ -14,11 +14,14 @@ ahk2exe := EnvGet("LOCALAPPDATA") "\Programs\AutoHotkey\Compiler\Ahk2Exe.exe"
 ; out:=A_AhkVersion
 ; set defautls and saved in ui... not sure where it's saved though
 ; https://www.autohotkey.com/docs/v2/Scripts.htm
-ahk_script_name := "cfw-folder-open.ahk" ; todo chang eas param
+;get ahk filepath from parameter
+ahk_script_name := A_Args[1]
+; ahk_script_name := "cfw-folder-open.ahk" ; todo chang eas param
+
 RunWait ahk2exe " /in " ahk_script_name
 
 
-tooltip out
-Sleep 1000
+; tooltip out
+; Sleep 1000
 
 exit
