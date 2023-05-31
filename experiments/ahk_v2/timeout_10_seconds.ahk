@@ -26,14 +26,33 @@ WinWait(titlename,,5) ; hard to debug cant see mouse through rdp
 WinActivate(titlename) ; wow typo had active instead of activate
 WinWaitActive(titlename,,5)
 tooltip "mousemove"
-MouseMove CX,CY + 50 ;offsett the check by 50 pixels, i think the (higher to check )
-; i.e. checks higher than the mouse. for obv reasonss
+MouseMove CX,CY
 global fileObj
 ; file open for append
+
+
 try {
+  StartTime := A_TickCount
+; Sleep 1000
+
+Tmp := StartTime + 10000
+loop 15{
+  tooltip A_Index
+  sleep 1000
+  if(Tmp < A_TickCount){
+    
+    
+    ElapsedTime := A_TickCount - StartTime
+MsgBox ElapsedTime " milliseconds have elapsed." A_TickCount " " StartTime " " A_Index
+return
+  }
+}
+
+exit 
   fileObj := FileOpen(logname, "a")
     ; loop 10 times
   loop 10 {
+    
     ; click and check for color change
     ClickAndCheck()
     ; wait 1 second; can use setimer, but this is simpler
@@ -68,16 +87,15 @@ ClickAndCheck(){
   tooltip "clicked and waiting"
   ; Wait for color to change
   color := PixelGetColor(CX, CY)
-  ; Timeout := StartTime + 10000 ; 10 seconds
-  Timeout := StartTime + 2000 ; 2 seconds might be more fair...
-  ; todo add timeout to params
+  ; i think it's 10 ms? im so confused
+  Timeout := StartTime + 10000 ; 10 seconds
   while color == initial_color {
-  ; Exits when color changes or timeout
-  if(Timeout < A_TickCount){
+  ; todo add timeout from timeout.ahk
+    if(Timeout > A_TickCount){
       ; FileAppend("Timeout in click_and_time.ahk`n", logname)
       fileObj.WriteLine(NameOfApp ":" StartTime ":" "Timeout")
       fileObj.Read(0)
-      return
+      break
       ; throw "Timeout"
     }
     sleep 10

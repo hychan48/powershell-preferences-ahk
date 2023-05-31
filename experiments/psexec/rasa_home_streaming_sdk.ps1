@@ -2,6 +2,8 @@
 Write-Output 'transfering ahk scripts...'
 $ahkToCompileList = @(
     "C:\Users\Jason\VSCodeProjects\powershell-preferences-ahk\experiments\ahk_v2\click_and_time.ahk"
+    # ,"C:\Users\Jason\VSCodeProjects\powershell-preferences-ahk\experiments\ahk_v2\mmove.ahk"
+    # ,"C:\Users\Jason\WebstormProjects\toggle-click\public\ahk\mmove.exe"
     # "C:\Users\Jason\VSCodeProjects\powershell-preferences-ahk\experiments\ahk_v2\powershell5_run_workaround.ahk"
 )
 
@@ -28,6 +30,7 @@ foreach ($ahkToCompile in $ahkToCompileList) {
     # copy to boht servers
     scp $outpath vdid-1:/AMD_VDI/$outfile
     scp $outpath vdid-2:/AMD_VDI/$outfile
+    
 }
 
 # compile first
@@ -70,11 +73,22 @@ foreach ($ahkToCompile in $ahkToCompileList) {
 # psexec -s -i 1 -nobanner -accepteula -d -w C:\AMD_VDI\ C:\AMD_VDI\click_and_time.exe
 # MsgBox "CX: " CX " CY: " CY " NameOfApp: " NameOfApp " titlename: " titlename " logname: " logname
 
-psexec -s -i 1 -nobanner -accepteula -d -w C:\AMD_VDI\ C:\AMD_VDI\click_and_time.exe 300 300 "TightVNC" "ws2019-1 - TightVNC Viewer"
-pskill -nobanner click_and_time.exe
+# psexec -s -i 1 -nobanner -accepteula -d -w C:\AMD_VDI\ C:\AMD_VDI\click_and_time.exe 300 300 "TightVNC" "ws2019-1 - TightVNC Viewer"
+# pskill -nobanner click_and_time.exe
 
 # psexec -s -i 1 -nobanner -accepteula -w C:\AMD_VDI\ C:\AMD_VDI\click_and_time.exe
 # psexec -s -i 1 -nobanner -accepteula -w C:\AMD_VDI\ C:\AMD_VDI\click_and_time.exe
+
+
+#mouse move
+# scp "C:\Users\Jason\VSCodeProjects\powershell-preferences-ahk\experiments\psexec\mmove.exe" vdid-1:/AMD_VDI/mmove.exe
+# scp "C:\Users\Jason\VSCodeProjects\powershell-preferences-ahk\experiments\psexec\mmove.exe" vdid-2:/AMD_VDI/mmove.exe
+
+# for it's 300 300
+# psexec -s -i 1 -nobanner -accepteula -w C:\AMD_VDI\ C:\AMD_VDI\mmove.exe 100 100
+# psexec -s -i 1 -nobanner -accepteula -w C:\AMD_VDI\ C:\AMD_VDI\mmove.exe 100 200 # default
+# psexec -s -i 1 -nobanner -accepteula -w C:\AMD_VDI\ C:\AMD_VDI\mmove.exe 100 250 # default
+# psexec -s -i 1 -nobanner -accepteula -w C:\AMD_VDI\ C:\AMD_VDI\mmove.exe 300 300
 
 # psexec -s -i 1 -nobanner -accepteula -d -w C:\AMD_VDI\ chrome.exe --hide-crash-restore-bubble --no-first-run --no-default-browser-check --disable-infobars "file:///c:/AMD_VDI/spa_toggle_click.html"
 # psexec -s -i 1 -nobanner -accepteula -w C:\AMD_VDI\ chrome.exe --hide-crash-restore-bubble --no-first-run --no-default-browser-check --disable-infobars "file:///c:/AMD_VDI/spa_toggle_click.html"
