@@ -45,10 +45,11 @@ SetKeyDelay 0,0 ; -1,-1
 
 ; # google ipv6 dns
 ; ; 2001:4860:4860::8844
+; sooo _ got changed to -.... need to look into that
 block := "
 (
-echo hi
-;bla
+    PUB_KEY="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG8YNDTSq1BTAA4KFPowIyPGbpwLKtli9Iyk6nyrM4vF jason@DESKTOP-2FU8K8O"
+    grep "$PUB_KEY" authorized_keys || echo "$PUB_KEY" >> authorized_keys
 
 
 
