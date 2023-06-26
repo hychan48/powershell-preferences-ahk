@@ -12,9 +12,27 @@ $PSCommandPath    # the full path of the script
 ```
 
 # Ctrl+Break
+```js
+//SIGINT or SIGBREAK
+//https://stackoverflow.com/questions/45257525/make-ctrlc-copy-and-ctrlshiftc-interrupt-in-vscode-terminal
+const WindowsTerminal = [
+  //up(escape[A terminal, so not up arrow) enter(\u000D \r)
+  {
+  "command": {
+    "action": "sendInput",
+    "input": "\u001b[A\u000D"
+  },
+  "keys":"alt+r"
+},
+];
+
+const VSCode = {
+
+}
+```
 * Due to keyboards not having ctrl c
 * https://learn.microsoft.com/en-us/windows/console/ctrl-c-and-ctrl-break-signals
-* i might not need it?
+* with WindowTerminals, not needed
 
 # Windows AHK Block Input
 * [BlockInput](https://www.autohotkey.com/docs/v1/lib/BlockInput.htm)
