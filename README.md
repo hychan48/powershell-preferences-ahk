@@ -76,3 +76,9 @@ explorer.exe %USERPROFILE%\.vscode\extensions
 ```ps1
 regjump HKCU\Software\Sysinternals
 ```
+
+# Windows Text to Speech
+## Cantonese
+```ps1
+# Cantonese Voice
+``````
