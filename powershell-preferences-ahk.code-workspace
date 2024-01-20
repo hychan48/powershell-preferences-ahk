@@ -1,0 +1,46 @@
+/**
+https://code.visualstudio.com/docs/editor/workspaces
+.code-workspace
+i.e:
+.vscode
+*/
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"AutoHotkey2.InterpreterPath": "c:\\Users\\Jason\\AppData\\Local\\Programs\\AutoHotkey\\v2\\AutoHotkey64.exe",
+		"files.associations":{
+			"src/ahk_v1/*.ahk":""
+		},
+		
+		
+
+
+		"files.exclude": {
+			".git/info/exclude": true,
+			".workspace_setting_location": true
+		},
+
+
+		/* General Editor Settings */
+				/**
+		 * force LF
+		 * force utf-8?
+		**/
+		//window config files are utf8
+		// "files.encoding": "utf8",//can be configured by language. auto better but should check
+		"breadcrumbs.enabled": true,
+		// "files.autoGuessEncoding": true, 
+		"files.eol": "\n",//crlf vs lf
+		"editor.indentSize": "tabSize",
+		"editor.detectIndentation": true,
+		"editor.tabSize": 2,
+		"editor.insertSpaces": true,
+	},
+	"extensions": {
+		"recommendations": []
+	}
+}

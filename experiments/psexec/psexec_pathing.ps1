@@ -1,0 +1,1 @@
+psexec -s -i hostname
