@@ -79,6 +79,7 @@ regjump HKCU\Software\Sysinternals
 
 # Windows Text to Speech
 ## Cantonese
+* [github.com/hychan48/speak-canto-tts-win](https://github.com/hychan48/speak-canto-tts-win)
 ```ps1
 # Cantonese Voice
 ``````
