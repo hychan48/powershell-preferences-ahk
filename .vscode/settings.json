@@ -13,6 +13,7 @@
         "editor.detectIndentation": true,
         "editor.tabSize": 2,
         "editor.insertSpaces": true,
+        "files.autoSave": "afterDelay",
         /* v1 both urls work suprisingly */
         // "AutoHotkey2.InterpreterPath": "c:\\Users\\Jason\\AppData\\Local\\Programs\\AutoHotkey\\v1.1.36.02\\AutoHotkeyU64.exe"
         // "AutoHotkey2.InterpreterPath": "C:/Program Files/AutoHotkey/AutoHotkeyU64.exe"
